@@ -58,8 +58,10 @@ li a:hover:not(.active) {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 480px;
   position: relative;
+margin-left: 50%;
+    margin-right: 50%;
   margin: auto;
 }
 

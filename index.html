@@ -6,7 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
-      
+
 var slideIndex = [1,1];
 var slideId = ["mySlides1", "mySlides2"]
 showSlides(1, 0);
@@ -19,12 +19,12 @@ function plusSlides(n, no) {
 function showSlides(n, no) {
   var i;
   var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}    
+  if (n > x.length) {slideIndex[no] = 1}
   if (n < 1) {slideIndex[no] = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+     x[i].style.display = "none";
   }
-  x[slideIndex[no]-1].style.display = "block";  
+  x[slideIndex[no]-1].style.display = "block";
 }
 
 
@@ -34,7 +34,7 @@ function showSlides(n, no) {
 
 <body>
     <header>
-        <a href="index.html"> <img class="logo" src="img/logo.png"></a>
+        <a href="index.html"> <img class="logo" src="img/logo.png"></a> <!-- REVIEW: alt attribuut -->
         <nav class="mainnav">
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
@@ -44,12 +44,13 @@ function showSlides(n, no) {
             </ul>
         </nav>
     </header>
+    <!-- REVIEW: begint hier niet de main? -->
     <h1>Welkom bij de kenniskringleden!</h1>
 
-<p>Slideshow 1:</p>
-<div class="slideshow-container">
+<p>Slideshow 1:</p> <!-- REVIEW: klinkt als een titel -->
+<div class="slideshow-container"> <!-- REVIEW: kun je hier geen section van maken? -->
   <div class="mySlides1">
-    <img src="img/slider3.jpg">
+    <img src="img/slider3.jpg"> <!-- REVIEW: denk aan de alt attributen -->
   </div>
 
   <div class="mySlides1">
@@ -64,7 +65,8 @@ function showSlides(n, no) {
   <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 </div>
 
-
+<!-- REVIEW: een caroussel is leuk, maar is eigenlijk de kers op de taart. Zorg eerst dat je pagina's staan en gestyled zijn voordat je aan
+dit soort dingen begint -->
 </body>
 
 </html>

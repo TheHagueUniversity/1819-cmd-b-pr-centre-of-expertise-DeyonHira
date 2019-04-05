@@ -6,6 +6,12 @@
 body {
 
     font-family: calibri;
+    height: 100%;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
 }
 
 header {
@@ -18,31 +24,89 @@ h1 {
 
 }
 
-.mainnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin-left: 500px;
-    position: fixed;
-    top: 0;
-    width: 100%;
+h3 {
+
+    text-align: center;
+
 }
 
-li {
+#MainMenu,
+#MainMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#MainMenu {
     float: left;
 }
 
-li a {
+#MainMenu > li {
+    float: left;
+}
+
+#MainMenu li a {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1.5em;
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    background-color: #9EA700;
+#MainMenu ul {
+    position: absolute;
+    display: none;
+    z-index: 999;
+}
+
+#MainMenu ul li a {
+    width: 110px;
+}
+
+#MainMenu li:hover ul.submenu {
+    display: block;
+}
+
+
+/* Main menu
+------------------------------------------*/
+#MainMenu {
+
+    font-family: Arial;
+    font-size: 12px;
+    background: #9EA700;
+    color: white;
+    margin-top: -50px;
+    margin-left: 90px;
+
+}
+
+#MainMenu > li > a {
+    color: #fff;
+    font-weight: bold;
+}
+
+#MainMenu > li:hover > a {
+    background: black;
+    color: white;
+}
+
+
+/* Submenu
+------------------------------------------*/
+#MainMenu ul {
+    background: #333;
+    padding: 0;
+}
+
+#MainMenu ul li a {
+    color: white;
+    ;
+}
+
+#MainMenu ul li:hover a {
+    background: #9EA700;
+
+
 }
 
 .active {
@@ -51,48 +115,52 @@ li a:hover:not(.active) {
 
 .logo {
     height: 100px;
-    margin-left: 400px;
 
 }
 
+.mainnav li .dropdown {
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 480px;
-  position: relative;
-margin-left: 50%;
-    margin-right: 50%;
-  margin: auto;
+    display: none;
+    list-style: none;
+
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.mainnav li:hover .dropdown {
+
+    display: block;
+
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.slideshow {
+
+    margin-left: 260px;
 }
 
-/* On hover, add a grey background color */
-.prev:hover, .next:hover {
-  background-color: #f1f1f1;
-  color: black;
+.colum1
+
+{
+    height: 50px;
+    border: 2px solid #9EA700 ;
 }
 
-.mySlides1 {
-    width: 100px;
+.footersection {
+    color: #9EA700;
+    background-color: darkgray;
+    height: 186px;
+    width: 19.7%;
+    border: 2px solid black;
+    float: left;
+    text-align: center;
+
+
+}
+
+.footersection a {
+    color: #9EA700;
+
+}
+
+.footersection a:hover {
+    color: white;
+
 }

@@ -5,69 +5,84 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script>
-
-var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2,"mySlides3"]
-showSlides(1, 0);
-showSlides(1, 1);
- showSlides(0,1);              
-
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
-
-function showSlides(n, no) {
-  var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex[no]-1].style.display = "block";
-}
-
-
-    </script>
 
 </head>
 
 <body>
+
     <header>
-        <a href="index.html"> <img class="logo" src="img/logo.png"></a> <!-- REVIEW: alt attribuut -->
-        <nav class="mainnav">
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="publicaties.html">Publicaties</a></li>
-                <li><a href="overons">Over ons</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <!-- REVIEW: alt attribuut --> <a href="index.html"> <img class="logo" src="img/logo.png" alt="Logo"></a> <!-- REVIEW: alt attribuut -->
+            <nav class="mainnav">
+                <ul id="MainMenu">
+
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Publicaties</a>
+                        <ul class="submenu">
+                            <li><a href="#">Artikel indienen</a></li>
+                            <li><a href="#">Publicaties bekijken</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Over ons</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
     </header>
-    <!-- REVIEW: begint hier niet de main? -->
-    <h1>Welkom bij de kenniskringleden!</h1>
 
-<p>Slideshow 1:</p> <!-- REVIEW: klinkt als een titel -->
-<div class="slideshow-container"> <!-- REVIEW: kun je hier geen section van maken? -->
-  <div class="mySlides1">
-    <img src="img/slider3.jpg"> <!-- REVIEW: denk aan de alt attributen -->
-  </div>
+    <main class="container">
+        <!-- REVIEW: begint hier niet de main? -->
+        <h1>Welkom bij de kenniskringleden!</h1>
 
-  <div class="mySlides2">
-    <img src="img/slider2.jpg">
-  </div>
+     
+        <div class="slideshow">
+            <img src="img/slider1.jpg" alt="Foto1">
+        </div>
+        <!-- REVIEW: klinkt als een titel -->
+        <section class="colomn1">
+        
+        <h3>Recente Publicaties</h3>
+        
+        
+        </section>
 
-  <div class="mySlides3">
-    <img src="img/slider1.jpg">
-  </div>
+    </main>
 
-  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-</div>
+    <footer class="footer">
+        <div class="footersection">
+            <h3>Home</h3>
+            <a href="#">- Home</a>
+        </div>
+        <div class="footersection">
+            <h3>Publicaties</h3>
+            <a href="#">- Publicaties bekijken <br> - Artikel indienen</a>
+        </div>
+        <div class="footersection">
 
-<!-- REVIEW: een caroussel is leuk, maar is eigenlijk de kers op de taart. Zorg eerst dat je pagina's staan en gestyled zijn voordat je aan
+            <h3>Over ons</h3>
+            <a href="#">- Wie zijn wij?</a>
+        </div>
+        <div class="footersection">
+            <h3>Contact</h3>
+            <a href="#">- Neem nu contact met ons op!</a>
+
+        </div>
+        <div class="footersection">
+            <h3>Ga snel naar</h3>
+
+            <a href="#">- Partners <br> - Docenten <br> - Studenten</a>
+        </div>
+
+
+
+    </footer>
+
+    <!-- REVIEW: een caroussel is leuk, maar is eigenlijk de kers op de taart. Zorg eerst dat je pagina's staan en gestyled zijn voordat je aan
 dit soort dingen begint -->
+
 </body>
 
 </html>
